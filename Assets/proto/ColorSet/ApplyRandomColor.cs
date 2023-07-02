@@ -4,8 +4,8 @@ using System.IO;
 
 public class ApplyRandomColor : MonoBehaviour
 {
-    public Image[] targetImages; // 인스펙터에서 지정할 이미지 컴포넌트 배열
-    public string protocolorFilePath = "proto/protocolor.json"; // 프로토컬러 파일 경로
+    public Image[] targetImages;
+    public string protocolorFilePath = "proto/protocolor.json";
 
     [System.Serializable]
     public class ProtocolorData

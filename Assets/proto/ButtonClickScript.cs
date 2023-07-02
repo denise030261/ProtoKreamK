@@ -4,12 +4,12 @@ using System.IO;
 
 public class ButtonClickScript : MonoBehaviour
 {
-    public Image image1;  // 첫 번째 이미지
-    public Image image2;  // 두 번째 이미지
-    public Image correctImage;  // 색상이 같을 경우 활성화할 이미지
-    public Image wrongImage;  // 색상이 다를 경우 활성화할 이미지
+    public Image image1; 
+    public Image image2; 
+    public Image correctImage;
+    public Image wrongImage;
 
-    private string filePath;  // JSON 파일 경로
+    private string filePath;
 
     private class JsonData
     {
@@ -21,7 +21,7 @@ public class ButtonClickScript : MonoBehaviour
         Button button = GetComponent<Button>();
         button.onClick.AddListener(OnButtonClick);
 
-        // JSON 파일 경로 설정
+        
         filePath = Path.Combine(Application.dataPath, "proto", "count.json");
     }
 
@@ -29,14 +29,14 @@ public class ButtonClickScript : MonoBehaviour
     {
         if (image1.color.Equals(image2.color))
         {
-            // 색상이 같을 경우
+            
             correctImage.gameObject.SetActive(true);
             wrongImage.gameObject.SetActive(false);
             IncrementTimes();
         }
         else
         {
-            // 색상이 다를 경우
+            
             correctImage.gameObject.SetActive(false);
             wrongImage.gameObject.SetActive(true);
         }

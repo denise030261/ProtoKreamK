@@ -13,7 +13,7 @@ public class StartButton : MonoBehaviour
 
     public void OnStartButtonClicked()
     {
-        // 프리팹을 비활성화합니다.
+       
         if (prefabToDisable != null)
         {
             prefabToDisable.SetActive(false);
